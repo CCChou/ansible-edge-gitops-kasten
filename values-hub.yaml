@@ -40,9 +40,9 @@ clusterGroup:
 
   imperative:
     jobs:
-      - name: deploy-kubevirt-worker
-        playbook: ansible/deploy_kubevirt_worker.yml
-        verbosity: -vvv
+      # - name: deploy-kubevirt-worker
+      #   playbook: ansible/deploy_kubevirt_worker.yml
+      #   verbosity: -vvv
       - name: clean-golden-images
         playbook: ansible/odf_clean_pvcs.yml
         image: quay.io/hybridcloudpatterns/utility-container:latest
