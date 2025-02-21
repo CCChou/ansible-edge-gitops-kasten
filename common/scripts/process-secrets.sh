@@ -14,4 +14,4 @@ PATTERNPATH=$(dirname "${COMMONPATH}")
 PATTERN_NAME=${1:-$(basename "`pwd`")}
 SECRETS_BACKING_STORE="$($SCRIPTPATH/determine-secretstore-backend.sh)"
 
-ansible-playbook -e pattern_name="${PATTERN_NAME}" -e pattern_dir="${PATTERNPATH}" -e secrets_backing_store="${SECRETS_BACKING_STORE}" "rhvp.cluster_utils.process_secrets"
+ansible-playbook -e pattern_name="${PATTERN_NAME}" -e pattern_dir="${PATTERNPATH}" -e secrets_backing_store="${SECRETS_BACKING_STORE}" -e override_no_log=false "rhvp.cluster_utils.process_secrets"
